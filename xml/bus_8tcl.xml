@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="bus_8tcl" kind="file" language="Tcl">
+    <compoundname>bus.tcl</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="bus_8tcl_1a30728837c246b65ef76298af0101d99c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>finish</definition>
+        <argsstring></argsstring>
+        <name>finish</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="bus.tcl" line="8" column="1" bodyfile="bus.tcl" bodystart="8" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="keyword">set</highlight><highlight class="normal"><sp/>data<sp/>[</highlight><highlight class="keyword">gets</highlight><highlight class="normal"><sp/>stdin]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">scan</highlight><highlight class="normal"><sp/>$data<sp/>&quot;%d<sp/>%d&quot;<sp/>N<sp/>k</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>ns<sp/><sp/>[new<sp/>Simulator]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>rtproto<sp/>DV</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>nf<sp/>[open<sp/>out.nam<sp/>w]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>namtrace-all<sp/>$nf</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">proc</highlight><highlight class="normal"><sp/>finish<sp/>{}<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">global</highlight><highlight class="normal"><sp/>ns<sp/>nf</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ns<sp/>flush-trace</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">close</highlight><highlight class="normal"><sp/>$nf</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">exec</highlight><highlight class="normal"><sp/>nam<sp/>out.nam</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">exit</highlight><highlight class="normal"><sp/>0</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">}</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">$ns<sp/>color<sp/>0<sp/>red</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>3<sp/>orange</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>2<sp/>purple</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>1<sp/>blue</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>4<sp/>green</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>5<sp/>brown</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>6<sp/>BlueViolet</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>8<sp/>cyan</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>10<sp/>grey</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>11<sp/>snow</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>7<sp/>aqua</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>color<sp/>9<sp/>azure</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>nodes<sp/>&quot;&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">for</highlight><highlight class="normal"><sp/>{</highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>i<sp/>0}<sp/>{$i<sp/>&lt;<sp/>$N}<sp/>{</highlight><highlight class="keyword">incr</highlight><highlight class="normal"><sp/>i}<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>n($i)<sp/>[$ns<sp/>node]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>lol<sp/>[</highlight><highlight class="keyword">expr</highlight><highlight class="normal"><sp/>{<sp/>$i<sp/>+<sp/>1}]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">if</highlight><highlight class="normal"><sp/>{<sp/>$lol<sp/>==<sp/>$N<sp/>}<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">append</highlight><highlight class="normal"><sp/>nodes<sp/>&quot;$n($i)&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keyword">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">append</highlight><highlight class="normal"><sp/>nodes<sp/>&quot;$n($i)<sp/>&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">}</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">puts</highlight><highlight class="normal"><sp/>$nodes</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>originX<sp/>0</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>originY<sp/>0</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>width<sp/><sp/><sp/>100</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>height<sp/><sp/>100</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>rowsize<sp/>[</highlight><highlight class="keyword">expr</highlight><highlight class="normal"><sp/>{$height<sp/>/<sp/>4}]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>rowY<sp/>[</highlight><highlight class="keyword">expr</highlight><highlight class="normal"><sp/>{$originY<sp/>+<sp/>$rowsize<sp/>/<sp/>2}]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>colsize<sp/>[</highlight><highlight class="keyword">expr</highlight><highlight class="normal"><sp/>{$width<sp/>/<sp/>$N}]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="keyword">for</highlight><highlight class="normal"><sp/>{</highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>i<sp/>0}<sp/>{$i<sp/>&lt;<sp/>$N}<sp/>{</highlight><highlight class="keyword">incr</highlight><highlight class="normal"><sp/>i}<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>rowX<sp/>[</highlight><highlight class="keyword">expr</highlight><highlight class="normal"><sp/>{$originX<sp/>+<sp/>$i<sp/>*<sp/>$colsize}]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>rowY<sp/>[</highlight><highlight class="keyword">expr</highlight><highlight class="normal"><sp/>{$originY<sp/>+<sp/>(<sp/>$i<sp/>%<sp/>2<sp/>)<sp/>*<sp/>$rowsize}]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$n($i)<sp/>set<sp/>X_<sp/>$rowX</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$n($i)<sp/>set<sp/>Y_<sp/>$rowY</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">}</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>lan0<sp/>[$ns<sp/>newLan<sp/>$nodes<sp/>0.5Mb<sp/>40ms<sp/>LL<sp/>Queue/DropTail<sp/>MAC/Csma/Cd<sp/>Channel]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">for</highlight><highlight class="normal"><sp/>{</highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>i<sp/>0}<sp/>{$i<sp/>&lt;<sp/>$k}<sp/>{</highlight><highlight class="keyword">incr</highlight><highlight class="normal"><sp/>i}<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>input<sp/>[</highlight><highlight class="keyword">gets</highlight><highlight class="normal"><sp/>stdin]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">scan</highlight><highlight class="normal"><sp/>$input<sp/>&quot;%d<sp/>%d&quot;<sp/>u<sp/>v</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>tcp<sp/>[new<sp/>Agent/TCP]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ns<sp/>attach-agent<sp/>$n($u)<sp/>$tcp</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$tcp<sp/>set<sp/>class_<sp/>$i</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>sink<sp/>[new<sp/>Agent/TCPSink]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ns<sp/>attach-agent<sp/>$n($v)<sp/>$sink</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ns<sp/>connect<sp/>$tcp<sp/>$sink</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>ftp0<sp/>[new<sp/>Application/FTP]</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ftp0<sp/>attach-agent<sp/>$tcp</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$tcp<sp/>set<sp/>fid_<sp/>$i</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$tcp<sp/>set<sp/>packet_size<sp/>552</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ns<sp/>at<sp/>0.1<sp/>&quot;$ftp0<sp/>start&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>$ns<sp/>at<sp/>1.5<sp/>&quot;$ftp0<sp/>stop&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">}</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">$ns<sp/>at<sp/>2.0<sp/>&quot;finish&quot;</highlight><highlight class="comment"></highlight></codeline>
+<codeline><highlight class="comment"></highlight><highlight class="normal">$ns<sp/>run</highlight></codeline>
+    </programlisting>
+    <location file="bus.tcl"/>
+  </compounddef>
+</doxygen>
