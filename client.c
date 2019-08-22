@@ -21,7 +21,7 @@ int main(int argc, char const *argv[]) {
     ServAddr.sin_port = htons(atoi(argv[2]));
     ServAddr.sin_addr.s_addr = inet_addr(argv[1]);
     char fileName[100];
-    printf("Type the name of file to be transferred : \t");
+    printf("Enter name of file to be transferred : \t");
     scanf("%s", fileName);
     FILE* f = fopen(fileName, "r");
     fgets(data, MAX_SIZE, f);
